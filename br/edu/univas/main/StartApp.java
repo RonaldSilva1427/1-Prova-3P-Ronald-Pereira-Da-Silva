@@ -11,7 +11,7 @@ public class StartApp {
     //Aluno: Ronald Pereira da Silva
 
     private static Scanner sc = new Scanner(System.in);
-
+    private static ArrayList<Aluno> alunoList = new ArrayList<>();
 
     public static void main(String[] args) {
 
@@ -19,7 +19,7 @@ public class StartApp {
         Scanner entrada = new Scanner(System.in);
 
         do {
-            Menu.menuPrincipal();
+            menu();
             opcao = entrada.nextInt();
 
             switch (opcao) {
@@ -35,7 +35,6 @@ public class StartApp {
                     listaAlunoMestrado();
                     break;
 
-
                 case 4:
                     fim();
                     break;
@@ -46,39 +45,93 @@ public class StartApp {
         } while (opcao != 0 || opcao == 0);
     }
 
-    // Volta para o menu principal
-    public static void continuar() {
-        System.out.println("\nPressione a tecla ENTER para voltar ao menu");
-        Scanner scContinuar = new Scanner(System.in);
-        scContinuar.nextLine();
 
-    }
 
          public static void cadastraAluno() {
-             System.out.println("Você escolheu a opção cadastra Aluno");
+             System.out.println("Você escolheu a opção cadastra Aluno:");
+             System.out.println("1 - Pós-graduação:");
+             System.out.println("2 - Mestrado:");
+
+             int opcao;
+             opcao = sc.nextInt();
+             if (opcao == 1) {
+                 sc.nextLine();
+                 System.out.println("Você escolheu a opção Pós-graduação:");
 
 
+             Aluno aluno = new Aluno();
+             System.out.println("Digite seu nome:");
+             String a = sc.nextLine();
+             aluno.getNome();
+             System.out.println("Digite seu CPF:");
+             String b = sc.nextLine();
+             aluno.getCpf();
+             System.out.println("Digite seu Email::");
+             String c = sc.nextLine();
+             aluno.getEmail();
+             alunoList.add(aluno);
 
 
+                 for (int i = 0; i < alunoList.size(); i++) {
+                     Aluno aluno1 = alunoList.get(i);
+                     if (aluno1 != null) {
+                         System.out.println("Nome " + aluno.getNome());
+                         System.out.println("CPF " + aluno.getCpf());
+                         System.out.println("Nome " + aluno.getEmail());
+                     }
+                 }
+
+             } else if (opcao == 2) {
+                 sc.nextLine();
+                 System.out.println("Você escolheu a opção Mestrado:");
+
+                 Aluno aluno = new Aluno();
+                 System.out.println("Digite seu nome:");
+                 String a = sc.nextLine();
+                 aluno.getNome();
+                 System.out.println("Digite seu CPF:");
+                 String b = sc.nextLine();
+                 aluno.getCpf();
+                 System.out.println("Digite seu Email::");
+                 String c = sc.nextLine();
+                 aluno.getEmail();
+                 alunoList.add(aluno);
 
 
-         }
+                 for (int i = 0; i < alunoList.size(); i++) {
+                     Aluno aluno1 = alunoList.get(i);
+                     if (aluno1 != null) {
+                         System.out.println("Nome " + aluno.getNome());
+                         System.out.println("CPF " + aluno.getCpf());
+                         System.out.println("Nome " + aluno.getEmail());
 
+                     }
+                 }
+             }
+    }
         public static void listaAlunoPos() {
-            System.out.println("Você escolheu a opção Lista Aluno Pos");
+            System.out.println("Você escolheu a opção Lista Aluno Pos-graduação:");
 
         }
 
-    public static void listaAlunoMestrado() {
-        System.out.println("Você escolheu a opção Lista Aluno Mestrado");
+         public static void listaAlunoMestrado() {
+        System.out.println("Você escolheu a opção Lista Aluno Mestrado:");
 
+        }
+
+
+    public static void menu() {
+        System.out.println("1 - Cadastra Aluno ");
+        System.out.println("2 - Lista Aluno Pós-graduação");
+        System.out.println("3 - Lista Aluno Mestrado");
+        System.out.println("4 - Sair");
     }
 
+    public static void fim() {
+        System.out.println("A aplicação foi encerrada!");
 
-
-
-
-
+        System.exit(0);
+    }
 
 
 
