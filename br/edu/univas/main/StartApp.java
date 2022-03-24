@@ -48,7 +48,7 @@ public class StartApp {
 
 
          public static void cadastraAluno() {
-             System.out.println("Você escolheu a opção cadastra Aluno:");
+             System.out.println("Você escolheu a opção cadastrar Aluno:");
              System.out.println("1 - Pós-graduação:");
              System.out.println("2 - Mestrado:");
 
@@ -66,7 +66,7 @@ public class StartApp {
              System.out.println("Digite seu CPF:");
              String b = sc.nextLine();
              aluno.getCpf();
-             System.out.println("Digite seu Email::");
+             System.out.println("Digite seu Email:");
              String c = sc.nextLine();
              aluno.getEmail();
              alunoList.add(aluno);
@@ -92,15 +92,15 @@ public class StartApp {
                  System.out.println("Digite seu CPF:");
                  String b = sc.nextLine();
                  aluno.getCpf();
-                 System.out.println("Digite seu Email::");
+                 System.out.println("Digite seu Email:");
                  String c = sc.nextLine();
                  aluno.getEmail();
                  alunoList.add(aluno);
 
 
                  for (int i = 0; i < alunoList.size(); i++) {
-                     Aluno aluno1 = alunoList.get(i);
-                     if (aluno1 != null) {
+                     Aluno aluno2 = alunoList.get(i);
+                     if (aluno2 != null) {
                          System.out.println("Nome " + aluno.getNome());
                          System.out.println("CPF " + aluno.getCpf());
                          System.out.println("Nome " + aluno.getEmail());
@@ -110,7 +110,7 @@ public class StartApp {
              }
     }
         public static void listaAlunoPos() {
-            System.out.println("Você escolheu a opção Lista Aluno Pos-graduação:");
+            System.out.println("Você escolheu a opção Lista Aluno Pós-graduação:");
 
         }
 
@@ -121,7 +121,7 @@ public class StartApp {
 
 
     public static void menu() {
-        System.out.println("1 - Cadastra Aluno ");
+        System.out.println("1 - Cadastrar Aluno ");
         System.out.println("2 - Lista Aluno Pós-graduação");
         System.out.println("3 - Lista Aluno Mestrado");
         System.out.println("4 - Sair");
